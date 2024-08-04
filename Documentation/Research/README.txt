@@ -1,0 +1,1 @@
+The research deliverable is summarized into a docx file in the current folder.

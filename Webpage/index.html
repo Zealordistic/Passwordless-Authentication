@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passwordless Webpage</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="offerings/config.js"></script>
+    <script src="offerings/offer_data.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="landing">
+      <section class="columnwrapper">
+        <div id="title">Go Passwordless,</div>
+        <div id="subtitle">For Less Hassle & More Security.</div>
+        <button id="btn" onclick="navigatePage('form')">GET STARTED</button>
+      </section>
+    </div>
+    <div id="form">
+      <section class="container">
+        <h1>Share Your Information</h1>
+
+        <section id="formwrapper">
+          <div class="columnwrapper">
+
+            <section class="formitem">
+              <label class="formlabel" for="company-budget">Company Budget:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="Money Available(in USD)">
+              </label>
+              <select class="formselect" id="company-budget" placeholder="Enter budget">
+                <option value="cb-0">Unspecified</option>
+                <option value="cb-1">Low(&lt; $50,000)</option>
+                <option value="cb-2">Normal($50,000 ~ $200,000)</option> 
+                <option value="cb-3">High($200,000 ~ $1,000,000)</option>
+              </select>
+            </section>
+
+            <section class="formitem">
+              <label class="formlabel" for="risk-tolerance">Risk Tolerance:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="High Risk Tolerance means companies can withstand minor security incidents">
+              </label>
+              <select class="formselect" id="risk-tolerance">
+                <option value="rt-0">Low</option>
+                <option value="rt-1">Medium</option>
+                <option value="rt-2">High</option>
+              </select>
+            </section>
+
+            <section class="formitem">
+              <label class="formlabel" for="compliance">Compliance:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="Policies being followed by your company">
+              </label>
+              <select class="formselect" id="compliance">
+                <option value="comp-0">Not sure</option>
+                <option value="comp-1">GDPR</option>
+                <option value="comp-2">ISO 27001</option>
+                <option value="comp-3">NIST</option>
+                <option value="comp-4">HIPAA</option>
+              </select>
+            </section>        
+
+            <section class="formitem">
+              <label class="formlabel" for="account-recovery">Account Recovery:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="">
+              </label>
+              <select class="formselect" id="account-recovery">
+                <option value="ar-0">Not sure</option>
+                <option value="ar-1">Security Questions</option>
+                <option value="ar-2">Backup Codes</option>
+                <option value="ar-3">Email Verification</option>
+                <option value="ar-4">Time-Limited Recovery Tokens</option>
+              </select>
+            </section>
+
+            <section class="formitem" id="methodsection">
+              <label for="method" class="formlabel">Method Filters:</label>
+              <select id="method" class="formselect" onclick="toggleCheckbox(this)">
+                <option selected hidden>Select Preferred Method(s)</option>
+              </select>
+              <div class="speciallabel filters" id="methods">
+              </div>
+            </section>
+          </div>
+
+          <div class="columnwrapper">
+            <section class="formitem">
+              <label class="formlabel" for="business-size">Business Size:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="Number of Employees">
+              </label>
+              <select class="formselect" id="business-size" placeholder="Enter business size">
+                <option value="size-0">Unspecified</option>
+                <option value="size-1">Tiny(&lt; 50)</option>
+                <option value="size-2">Small(51 ~ 100)</option>
+                <option value="size-3">Medium(101 ~ 500)</option>
+                <option value="size-4">Large(500 ~ 1,000)</option>
+                <option value="size-5">Colossal(&gt; 1000)</option>
+              </select>
+            </section>
+            <section class="formitem">
+              <label class="formlabel" for="work-environment">Work Environment:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="Workplaces for Employees">
+              </label>
+              <select class="formselect" id="work-environment">
+                <option value="we-0">In-person</option>
+                <option value="we-1">Remote</option>
+                <option value="we-2">Hybrid</option>
+              </select>
+            </section>
+            <section class="formitem">
+              <label class="formlabel" for="device-compatibility">Device Compatibility:
+                <img class="imginfo" src="Infobox_info_icon.svg" title="What devices are mainly used in your company">
+              </label>
+              <select class="formselect" id="device-compatibility">
+                <option value="dc-0">Not sure</option>
+                <option value="dc-1">Mobile</option>
+                <option value="dc-2">Desktop</option>
+                <option value="dc-3">Cross-Platform</option>
+              </select>
+            </section>
+
+            <section class="formitem" id="vendorcheck">
+              <label for="vendors" class="formlabel">Vendor Filters:</label>
+              <select id="vendor" class="formselect" onclick="toggleCheckbox(this)">
+                <option selected hidden>Select Preferred Vendor(s)</option>
+              </select>
+              <div class="speciallabel filters" id="vendors">
+              </div>
+            </section>
+          </div>
+        </section>
+        
+        <section class="rowrapper">
+          <input class="formbutton" type="submit" value="Submit" onclick="processFormData();navigatePage('offering')"
+                 title="Click to find best market offerings of Passwordless Authentication"/>
+          <button class="formbutton" onclick="navigatePage('landing')" title="Click to go back to the landing page">Back</button>
+        </section>
+      </section>
+    </div>
+    <div id="offering">
+      <section id="header">Recommended Market Offerings</section>
+      <section id="offeringsContainer"></section>
+  </body>
+</html>

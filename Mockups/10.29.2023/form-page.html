@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Share Your Information</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #333;
+        border-radius: 5px;
+        padding: 30px 50px;
+        width: 400px;
+      }
+
+      .container h1 {
+        color: #fff;
+        margin-top: 0;
+      }
+
+      .container label {
+        color: #bbb;
+        display: block;
+        margin: 20px 0 5px;
+      }
+
+      .container input[type="text"],
+      .container select {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #555;
+        color: #fff;
+        margin-bottom: 10px;
+        outline: none;
+      }
+
+      .container input[type="submit"],
+      .container button {
+        background-color: #0066ff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+
+      .container button {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="form">
+      <h1>Share Your Information</h1>
+
+      <label for="company-name">Company Name:</label>
+      <input type="text" id="company-name" placeholder="Enter company name" />
+
+      <label for="business-size">Business Size:</label>
+      <input type="text" id="business-size" placeholder="Enter business size" />
+
+      <label for="company-budget">Company Budget:</label>
+      <input type="text" id="company-budget" placeholder="Enter budget" />
+
+      <label for="cloud-model">Cloud Model(Optional):</label>
+      <input
+        type="text"
+        id="cloud-model"
+        placeholder="Cloud Model (e.g., IaaS)"
+      />
+
+      <label for="security-importance">Security Importance:</label>
+      <select id="security-importance">
+        <option value="high">High</option>
+        <!-- You can add more options if needed -->
+      </select>
+
+      <label for="work-environment">Work Environment:</label>
+      <select id="work-environment">
+        <option value="remote">Remote</option>
+        <!-- You can add more options if needed -->
+      </select>
+
+      <label for="seamlessness">Seamlessness:</label>
+      <select id="seamlessness">
+        <option value="high">High</option>
+        <!-- You can add more options if needed -->
+      </select>
+
+      <label for="description">Description(Optional):</label>
+      <input type="text" id="description" placeholder="Enter description" />
+
+      <div>
+        <input type="submit" value="Submit" />
+        <button>Back</button>
+      </div>
+    </div>
+  </body>
+</html>

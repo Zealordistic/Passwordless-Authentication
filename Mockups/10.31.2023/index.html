@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passwordless Webpage</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="landing">
+      <section>
+        <div class="title">Go Passwordless,</div>
+        <div class="subtitle">For Less Hassle & More Security.</div>
+        <button class="btn" onclick="navigatePage('form')">GET STARTED</button>
+      </section>
+    </div>
+    <div id="form">
+      <section class="container">
+        <h1>Share Your Information</h1>
+        <section>
+          <label for="company-name" class="biglabel">Company Name:</label>
+          <input type="text" class="bigfield" id="company-name" placeholder="Enter company name" />
+        </section>
+        <section class="leftfield">
+          <label for="business-size" class="smalllabel">Business Size:</label>
+          <input type="text" class="smallfield" id="business-size" placeholder="Enter business size" />
+        </section>
+        <section class="rightfield" >
+          <label for="company-budget" class="smalllabel">Company Budget:</label>
+          <input type="text" class="smallfield" id="company-budget" placeholder="Enter budget" />
+        </section>
+        <section class="leftfield">
+          <label for="cloud-model" class="smalllabel">Cloud Service Model(Optional):</label>
+          <input
+            type="text"
+            id="cloud-model"
+            class="smallfield"
+            placeholder="Enter Service Model"
+          />
+        </section>
+        <section class="rightfield">
+          <label for="risk-tolerance" class="smalllabel">Risk Tolerance:</label>
+          <select class="smallfield" id="risk-tolerance">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </section>
+        <section class="leftfield">
+          <label for="work-environment" class="smalllabel">Work Environment:</label>
+          <select class="smallfield" id="work-environment">
+            <option value="inperson">In-person</option>
+            <option value="remote">Remote</option>
+            <option value="hybrid">Hybrid</option>
+          </select>
+        </section>
+        <section class="rightfield">
+          <label for="physical" class="smalllabel">Physical Servers Employed:</label>
+          <select class="smallfield" id="physical">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <!-- You can add more options if needed -->
+          </select>
+        </section>
+        <section class="description">
+          <label for="description" class="biglabel">Description(Optional):</label>
+          <input type="text" class="bigfield" id="description" placeholder="Enter description" />
+        </section>
+        <div class="leftfield">
+          <input type="submit" value="Submit" onclick="navigatePage('offering')"/>
+          <button onclick="navigatePage('landing')">Back</button>
+        </div>
+      </section>
+    </div>
+    <div id="offering">
+      <section class="container">
+        <div class="header">Recommended Market Offerings</div>
+        <!-- Cisco Duo Card -->
+        <div class="best card">
+          <img class="logo" src="duo.png"></img>
+          <div class="title">Cisco Duo</div>
+          <p id="top">Most Recommended!</p>
+          <button onclick="toggleExtra(this)">SHOW LESS</button>
+          <section class="bestchoice details">
+            <p class="detail">Implementation Cost: 4/10</p>
+            <p class="detail">Seamlessness: 7/10</p>
+            <p class="detail">Implementation Difficulty: 3/10</p>
+            <p class="extra">            
+              Additional Features:<br />
+              - Mobile-Friendly<br />
+              - Supports OTP<br /></p>
+          </section>
+        </div>
+        <!-- BioCatch Card -->
+        <div class="normal card">
+          <img class="logo" src="biomatch.png"></img>
+          <div class="title">BioCatch</div>
+          <button onclick="toggleExtra(this)">SHOW MORE</button>
+          <section class="choice details">
+            <p class="detail">Implementation Cost: 2/10</p>
+            <p class="detail">Seamlessness: 3/10</p>
+            <p class="detail">Implementation Difficulty: 6/10</p>
+            <p class="extra">Additional Details...</p>
+          </section>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

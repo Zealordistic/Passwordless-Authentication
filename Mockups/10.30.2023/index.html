@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passwordless Webpage</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="landing">
+      <section class="container">
+        <div class="title">Go Passwordless,</div>
+        <div class="subtitle">For Less Hassle & More Security.</div>
+        <button class="btn" onclick="navigatePage('form')">GET STARTED</button>
+      </section>
+    </div>
+    <div id="form">
+      <section class="container">
+        <h1>Share Your Information</h1>
+
+        <label for="company-name">Company Name:</label>
+        <input type="text" id="company-name" placeholder="Enter company name" />
+
+        <label for="business-size">Business Size:</label>
+        <input type="text" id="business-size" placeholder="Enter business size" />
+
+        <label for="company-budget">Company Budget:</label>
+        <input type="text" id="company-budget" placeholder="Enter budget" />
+
+        <label for="cloud-model">Cloud Model(Optional):</label>
+        <input
+          type="text"
+          id="cloud-model"
+          placeholder="Enter Cloud Model (e.g., IaaS)"
+        />
+
+        <label for="security-importance">Security Importance:</label>
+        <select id="security-importance">
+          <option value="high">High</option>
+          <!-- You can add more options if needed -->
+        </select>
+
+        <label for="work-environment">Work Environment:</label>
+        <select id="work-environment">
+          <option value="remote">Remote</option>
+          <!-- You can add more options if needed -->
+        </select>
+
+        <label for="seamlessness">Seamlessness:</label>
+        <select id="seamlessness">
+          <option value="high">High</option>
+          <!-- You can add more options if needed -->
+        </select>
+
+        <label for="description">Description(Optional):</label>
+        <input type="text" id="description" placeholder="Enter description" />
+
+        <div>
+          <input type="submit" value="Submit" onclick="navigatePage('offering')"/>
+          <button onclick="navigatePage('landing')">Back</button>
+        </div>
+      </section>
+    </div>
+    <div id="offering">
+      <section class="container">
+        <div class="header">Recommended Market Offerings</div>
+  
+        <!-- Cisco Duo Card -->
+        <div class="card">
+          <div class="logo"></div>
+          <div class="title">Cisco Duo</div>
+          <div class="details">Implementation Cost: 4/10</div>
+          <div class="details">Seamlessness: 7/10</div>
+          <div class="details">Implementation Difficulty: 3/10</div>
+          <div class="extra">Additional Details...</div>
+          <button class="show-btn" onclick="toggleExtra(this)">SHOW MORE</button>
+        </div>
+  
+        <!-- BioCatch Card -->
+        <div class="card">
+          <div class="logo"></div>
+          <div class="title">BioCatch</div>
+          <div class="details">Implementation Cost: 2/10</div>
+          <div class="details">Seamlessness: 3/10</div>
+          <div class="details">Implementation Difficulty: 6/10</div>
+          <div class="extra">
+            Additional Features:<br />
+            - Mobile-Friendly<br />
+            - Supports OTP<br />
+          </div>
+          <button class="show-btn" onclick="toggleExtra(this)">SHOW MORE</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
